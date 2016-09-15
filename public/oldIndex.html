@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="components/Materialize/dist/css/materialize.min.css">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+
+
+        <title>ITN</title>
+    </head>
+    <body ng-app="app">
+    <div class="navbar-fixed">
+        <nav class="blue darken-4" role="navigation">
+            <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">ITN Horquillas</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Quiénes somos</a></li>
+                    <li><a href="#">Catalogo</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="#">Navbar Link</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+    <div class="section container">
+        <h1 class="header center teal-text accent-4">Quiénes somos</h1>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="imagen/taller1.jpg"></div>
+    </div>
+    <div class="section container" id="">
+        <div ng-controller="catalogController">
+            <h1 class="header center teal-text accent-4">Catálogo</h1>
+            <div class="row center">
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li class="" ng-repeat="marca in marcas">
+                        <div class="collapsible-header">{{marca.marca}}</div>
+                        <div class="collapsible-body">
+                            <div class="row">
+                                <div class="col s3"><b>Categoria</b></div>
+                                <div class="col s3"><b>Cod ITN</b></div>
+                                <div class="col s3"><b>Detalle</b></div>
+                                <div class="col s3"><b>Imagen</b></div>
+                            </div>
+                            <div class="divider"></div>
+                            <div  ng-repeat="cat in marca.categorias">
+                                <div class="row" ng-repeat="prod in cat.productos">
+                                    <div class="col s3">
+                                        {{cat.nombre}}
+                                    </div>
+                                    <div class="col s3" >
+                                        {{prod.cod}}
+                                    </div>
+                                    <div class="col s3">
+                                        {{prod.detalle}}
+                                    </div>
+                                    <div class="col s3">
+                                        <img class="materialboxed" width="30" src='{{prod.imagen}}'>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="imagen/taller2.jpg"></div>
+    </div>
+    <div class="section container">
+        <div class="header center teal-text accent-4">
+            <h1>Contáctenos</h1>
+        </div>
+        <div class="row center">
+            <div class="col s12 offset-m2 m2">
+                <i class="small material-icons">phone</i>
+                <p class="">4225-5650 / 4225-7615</p>
+                <i class="small material-icons">stay_current_portrait</i>
+                <p>15-3049-1821 / 15-3095-4479</p>
+                <i class="small material-icons">email</i>
+                <p>itnhorquillas@gmail.com</p>
+                <p>Sanma.itn@gmail.com</p>
+            </div>
+            <div class="col s12 offset-m1 m7">
+                <div class="row center">
+                    <div class="col s12 m7">
+                        <div id="map" class="center"></div>
+                        <p>Planta Industrial:  Santiago del Estero 2735 (Lanús oeste)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row center">
+            <h5>O envienos un E-Mail a través de esta pagina completando el siguiente formulario.</h5>
+        </div>
+        <br>
+        <br>
+        <div ng-controller="emailController">
+            <div class="row" >
+                <div id="contactForm">
+                    <div class="col s12 m6 offset-m3 input-field">
+                        <label for="mail">Introduzca su E-Mail</label>
+                        <input id="mail" type="email" ng-model="emailData.from">
+                    </div>
+                    <div class="col s12 m6 offset-m3 input-field">
+                        <label for="subject">Asunto</label>
+                        <input id="subject" type="text" ng-model="emailData.subject">
+                    </div>
+                    <div class="col s12 m6 offset-m3 input-field">
+                        <label for="texto">Texto</label>
+                        <textarea id="texto" class="materialize-textarea" ng-model="emailData.text"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row center">
+                <a class="waves-effect waves-light btn" ng-click="sendEmail()"><i class="material-icons right">send</i>Enviar</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer orange">
+        <div class="footer-copyright">
+            <div class="container">
+                Made by Maxi Di Mito
+            </div>
+        </div>
+    </footer>
+    <script src="components/jquery/dist/jquery.min.js"></script>
+    <script src="components/Materialize/dist/js/materialize.min.js"></script>
+    <script src="components/angular/angular.min.js"></script>
+    <script src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+
+    </body>
+</html>
