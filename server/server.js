@@ -10,7 +10,7 @@ require("babel-polyfill");
 app.use(router);
 
 const keepAlive = () =>{
-    setTimeOut(keepAlive, 5000);
+    setTimeout(keepAlive, 5000);
     console.log("keepAliveando");
 };
 
