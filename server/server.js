@@ -11,7 +11,7 @@ require("babel-polyfill");
 app.use(router);
 
 const option = {
-    host: 'www.random.org'
+    host: 'itn-web.herokuapp.com/'
 };
 
 const keepAlive = () =>{
