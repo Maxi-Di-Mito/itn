@@ -7,7 +7,7 @@ import bodyParser from "body-parser";
 const router = express.Router();
 
 
-var logger = require('./LoggerMiddleware');
+import logger from './LoggerMiddleware';
 import ProductController from './controller/ProductsController';
 
 router.use(bodyParser.json());
@@ -21,14 +21,16 @@ router.get('/',(request,response) => {
 
 router.get('/catalog', ProductController.getAllProducts);
 router.post('/catalog/insert', ProductController.insertProduct);
+//router.delete('catalog/{id}', ProductController.deleteProduct);
+//router.put('catalog/{id}', ProductController.modifyProduct);
+
 
 router.post('/sendMail',(request,response)=>{
-
     response.json(
-        {
-            status:"OK",
-            message: "Su mensaje fue enviado."
-        });
+    {
+        status:"OK",
+        message: "Su mensaje fue enviado."
+    });
 });
 
 
