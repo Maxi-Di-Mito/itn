@@ -9,9 +9,16 @@ require("babel-polyfill");
 
 app.use(router);
 
+const keepAlive = () =>{
+    setTimeOut(keepAlive, 5000);
+    console.log("keepAliveando");
+};
+
+
 
 var port = process.env.PORT || 8080;
 
 app.listen(port,()=>{
     console.log("Listening on port "+port);
+    keepAlive();
 });
