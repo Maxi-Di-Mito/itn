@@ -2,7 +2,7 @@
   "name": "itn",
   "version": "0.0.1",
   "scripts": {
-    "start-dev": "npm run postinstall && npm run start",
+    "start-dev": "npm install && npm run start",
     "start": "node index.js",
     "compile": "babel ./server -d ./dist",
     "preinstall": "npm prune && rimraf ./public/dist && rimraf ./dist",
@@ -23,6 +23,7 @@
     "bluebird": "^3.4.6",
     "body-parser": "^1.15.0",
     "classnames": "^2.2.5",
+    "compression": "^1.6.2",
     "css-loader": "^0.23.1",
     "express": "latest",
     "file-loader": "^0.9.0",
