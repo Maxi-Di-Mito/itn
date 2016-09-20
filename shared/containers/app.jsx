@@ -13,7 +13,8 @@ import {blue400, darkBlack} from 'material-ui/styles/colors';
 
 
 const toolbarStyle = {
-    background: blue400
+    background: blue400,
+    margin:0
 };
 const buttonStyle = {
     height:"auto",
@@ -21,7 +22,9 @@ const buttonStyle = {
 };
 
 const titleStyle = {
-    color: darkBlack
+    color: darkBlack,
+    fontWeight: "bold",
+    fontFamily: "Roboto"
 };
 
 

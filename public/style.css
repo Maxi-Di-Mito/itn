@@ -1,7 +1,11 @@
 body{
     background: rgba(197, 182, 164, 0.46);
+    margin: 0;
 }
 
+h1{
+    font-family: "Roboto";
+}
 /*.parallax-container {
     height: 350px;
 }*/

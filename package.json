@@ -4,6 +4,7 @@
   "scripts": {
     "start-dev": "npm run postinstall && npm run start",
     "start": "babel-node server/server.js",
+    "preinstall": "npm prune",
     "postinstall": "npm run webpack",
     "webpack": "webpack --progress --profile --colors"
   },
@@ -34,7 +35,6 @@
     "react-dom": "^15.1.0",
     "react-flexbox-grid": "^0.9.6",
     "react-gmaps": "^1.5.0",
-    "react-mdl": "^1.6.1",
     "react-pure-render": "^1.0.2",
     "react-redux": "^4.4.5",
     "react-simple-parallax": "^0.2.6",
