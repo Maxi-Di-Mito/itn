@@ -3,7 +3,7 @@
  */
 var path = require('path');
 var webpack = require('webpack');
-var isDev = true;
+const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
     entry: [path.join(__dirname, './public/index.jsx')],
@@ -26,7 +26,7 @@ module.exports = {
             }
         ]
     },
-    plugins:!isDev?[
+    plugins:isProd?[
         new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}}),
         new webpack.optimize.DedupePlugin()
     ]:[]

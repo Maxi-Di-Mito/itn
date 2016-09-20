@@ -15,10 +15,6 @@ h1{
     margin-bottom: 10px;
 }
 
-.react-simple-parallax-bg {
-    background-image: url('imagen/taller1.jpg');
-    height: 400px;
-}
 
 /*
 img {
@@ -27,12 +23,3 @@ img {
     margin-right: auto;
 }*/
 
-
-/*Para el efecto de los botones de la navbar
-a.mdl-js-ripple-effect {
-    display: inline-block;
-    position: relative;
-    width: auto;
-    height: auto;
-    text-align: center;
-}*/
