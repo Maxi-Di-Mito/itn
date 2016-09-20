@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "scripts": {
     "start-dev": "npm run postinstall && npm run start",
-    "start": "babel-node server/server.js",
-    "preinstall": "npm prune",
-    "postinstall": "npm run webpack",
+    "start": "node index.js",
+    "compile": "babel ./server -d ./dist",
+    "preinstall": "npm prune && rimraf ./public/dist && rimraf ./dist",
+    "postinstall": "npm run webpack && npm run compile",
     "webpack": "webpack --progress --profile --colors"
   },
   "dependencies": {
@@ -42,6 +43,7 @@
     "redux": "^3.5.2",
     "redux-logger": "^2.6.1",
     "redux-thunk": "^2.0.1",
+    "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
   },
