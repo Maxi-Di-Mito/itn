@@ -2,9 +2,9 @@
   "name": "itn",
   "version": "0.0.1",
   "scripts": {
-    "start": "npm run webpack && babel-node server/server.js",
-    "bower": "bower install",
-    "bower-host": "HOME=$OPENSHIFT_DATA_DIR bower install",
+    "start-dev": "npm run postinstall && npm run start",
+    "start": "babel-node server/server.js",
+    "postinstall": "npm run webpack",
     "webpack": "webpack --progress --profile --colors"
   },
   "dependencies": {
