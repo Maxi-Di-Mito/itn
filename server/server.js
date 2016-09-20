@@ -1,12 +1,12 @@
 /**
  * Created by MaxYCele on 29/4/2016.
  */
-var express = require("express");
-const http = require('http');
-var app = express();
-var serverConfig = require("./server_config");
-var router = require("./router");
+import express from "express";
+const app = express();
+import router from "./router";
+import compression from "compression";
 
+app.use(compression());
 app.use(router);
 
 var port = process.env.PORT || 8080;

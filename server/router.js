@@ -34,4 +34,4 @@ router.post('/sendMail',(request,response)=>{
 });
 
 
-module.exports = router;
+export default router;
