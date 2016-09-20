@@ -5,7 +5,9 @@ import express from "express";
 const app = express();
 import router from "./router";
 import compression from "compression";
+import cacheHandler from "./Cachehandler";
 
+app.use(cacheHandler);
 app.use(compression());
 app.use(router);
 
