@@ -22,16 +22,13 @@ const cacheMap = [
         pattern: /\.(woff|woff2|ttf|eot|svg)$/,
         cacheTime: "36288000"
     },
-    ,
     {
         type: "script",
         pattern: /\.(js)$/
     }
-]
-
+];
 
 const CacheHandler = (request, response, next) => {
-
     cacheMap.forEach((cacheData) => {
         if(request.url.match(cacheData.pattern)) {
             console.log("Caching " + cacheData.type);
@@ -40,7 +37,7 @@ const CacheHandler = (request, response, next) => {
             else
                 response.header('Cache-Control', `public, max-age=${cacheData.cacheTime}`);
         }
-    })
+    });
 
     return next();
 };
