@@ -1,5 +1,5 @@
 import React, { Component ,PropTypes } from 'react';
-import {blue400, darkBlack} from 'material-ui/styles/colors';
+import { blue400, darkBlack} from 'material-ui/styles/colors';
 import { Toolbar, ToolbarGroup, ToolbarTitle, Paper } from 'material-ui';
 import HeaderMenu from './HeaderMenu';
 

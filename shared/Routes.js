@@ -1,7 +1,7 @@
 import React, { Component ,PropTypes } from 'react';
 import { Route, IndexRoute } from 'react-router';
 import Main from './Main';
-import Website from './App';
+import Website from './module/website/Website';
 
 const routes = (
 	<Route path="/" component={Main}>

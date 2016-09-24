@@ -1,7 +1,7 @@
 import React, { Component ,PropTypes } from 'react';
-import ContactSectionView from './ContactSectionView.jsx'
+import ContactSectionView from './ContactSectionView.js'
 import $ from 'jquery';
-
+import { connect } from 'react-redux';
 
 const sendMail = (form) => {
     return new Promise((resolve, reject)=>{
@@ -19,14 +19,21 @@ const sendMail = (form) => {
             }
         });
     })
-
 };
 
-const ContactSection = () => (
+const mapDispatchToProps = (dispatch) => ({
+    handleSubmit: (form) => sendMail(form)
+});
 
-        <ContactSectionView sendMail={sendMail}/>
-)
+// @connect(null, mapDispatchToProps)
+class ContactSection extends Component {
+    render() {
+        let { handleSubmit } = this.props;
 
-
+        return (
+            <ContactSectionView sendMail={sendMail}/>
+        )
+    }
+}
 
 export default ContactSection;

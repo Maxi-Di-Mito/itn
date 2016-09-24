@@ -1,22 +1,9 @@
 import React, {PropTypes, Component} from 'react';
-import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
+import { Gmaps, Marker } from 'react-gmaps';
 
-class GMap extends Component {
-
-
-
-    constructor(props) {
-        super(props);
-    }
-
-    onMapCreated()
-    {
-
-    }
-    ;
+class GoogleMaps extends Component {
     render() {
-
-        const {lat,lng,width,height,zoom} = this.props;
+        let { lat, lng, width, height, zoom } = this.props;
 
         return (
             <Gmaps
@@ -25,27 +12,23 @@ class GMap extends Component {
                 lat={lat}
                 lng={lng}
                 zoom={zoom}
-                loadingMessage={'Be happy'}
                 params={{v: '3.exp'}}>
                 <Marker
                     lat={lat}
                     lng={lng}
                     draggable={false}
-                     />
+                />
             </Gmaps>
-
-
         );
     }
 }
 
-GMap.propTypes =
-{
+GoogleMaps.propTypes = {
     lat: PropTypes.string.isRequired,
     lng: PropTypes.string.isRequired,
     width: PropTypes.string.isRequired,
     height: PropTypes.string.isRequired,
     zoom: PropTypes.number.isRequired
-}
+};
 
-export default GMap;
+export default GoogleMaps;

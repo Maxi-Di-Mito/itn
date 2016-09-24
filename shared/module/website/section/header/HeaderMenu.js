@@ -1,5 +1,5 @@
 import React, { Component ,PropTypes } from 'react';
-import { FontIcon, IconMenu, ToolbarGroup } from 'material-ui';
+import { FontIcon, ToolbarGroup } from 'material-ui';
 import FlatButtonLink from './FlatButtonLink';
 import HeaderMenuMobile from './HeaderMobileMenu';
 
@@ -37,7 +37,7 @@ class HeaderMenu extends Component {
 					<FlatButtonLink
 						isMobile={isMobile}
 						to="#catalog"
-						label="Catalogo"
+						label="Catálogo"
 						icon={catalogIcon}
 					/>
 					<FlatButtonLink
