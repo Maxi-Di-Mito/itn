@@ -39,18 +39,21 @@ class HeaderMenu extends Component {
 						to="#catalog"
 						label="Catálogo"
 						icon={catalogIcon}
+						primary
 					/>
 					<FlatButtonLink
 						isMobile={isMobile}
 						to="#us"
 						label="Quienes Somos"
 						icon={usIcon}
+						primary
 					/>
 					<FlatButtonLink
 						isMobile={isMobile}
 						to="#contact"
 						label="Contacto"
 						icon={contactIcon}
+						primary
 					/>
 				</ToolbarGroup>
 			);

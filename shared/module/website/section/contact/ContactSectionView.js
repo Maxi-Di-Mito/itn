@@ -34,36 +34,41 @@ class ContactSectionView extends Component {
         const mapProps = {
             lat: "-34.702200",
             lng: "-58.407615",
-            width: "400px",
-            height: "400px",
             zoom: 16
         };
 
         return (
             <section id="contact">
-                <Grid>
-                    <Row center="md">
-                        <h1>Contáctenos</h1>
-                    </Row>
-                    <Row>
-                        <Col md={6}>
-                            <Row center="md">
-                                <Paper Depth={2} >
+                <div className="container">
+                    <div className="google-map">
+                       <GoogleMaps {...mapProps}/>
+                    </div>
+                    <div className="overlap">
+                        <Row>
+                            <Col md={4}>
+                                <Paper Depth={2} style={{ padding: "20px" }}>
+                                    <h3>Contáctenos</h3>
                                     <form id="contactForm" ref="contactForm">
                                         <TextField
                                             floatingLabelText="Introduzca su E-Mail"
-                                            id="mail" name="mail"
+                                            id="mail"
+                                            name="mail"
+                                            fullWidth
                                         />
                                         <TextField
                                             floatingLabelText="Asunto"
-                                            id="subject" name="subject"
+                                            id="subject"
+                                            name="subject"
+                                            fullWidth
                                         />
                                         <TextField
                                             floatingLabelStyle={{}}
                                             floatingLabelText="Texto"
                                             multiLine={true}
                                             rows={5}
-                                            id="texto" name="texto"
+                                            id="texto"
+                                            name="texto"
+                                            fullWidth
                                         />
                                     </form>
                                     <RaisedButton
@@ -74,21 +79,16 @@ class ContactSectionView extends Component {
                                         onClick={this.sendMail}
                                     />
                                 </Paper>
-                            </Row>
-                        </Col>
-                        <Col md={6}>
-                            <Row center="md">
-                                <GoogleMaps {...mapProps}/>
-                            </Row>
-                        </Col>
-                    </Row>
-                    <Snackbar
-                        open={this.state.open}
-                        message={this.state.snackBarMessage}
-                        autoHideDuration={4000}
-                        onRequestClose={this.handleRequestClose}
-                    />
-                </Grid>
+                            </Col>
+                        </Row>
+                    </div>
+                </div>
+                <Snackbar
+                    open={this.state.open}
+                    message={this.state.snackBarMessage}
+                    autoHideDuration={4000}
+                    onRequestClose={this.handleRequestClose}
+                />
             </section>
         );
     };

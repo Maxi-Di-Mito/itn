@@ -26,9 +26,9 @@ class FlatButtonLink extends Component {
 					<FlatButton
 						label={label}
 						style={buttonStyle}
-						backgroundColor={blue400}
 						icon={icon}
 						labelPosition="after"
+						primary
 					/>
 				</Link>
 			)

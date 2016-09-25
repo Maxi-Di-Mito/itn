@@ -1,5 +1,5 @@
 import React, { Component ,PropTypes } from 'react';
-import { blue400, darkBlack} from 'material-ui/styles/colors';
+import { blue500 } from 'material-ui/styles/colors';
 import { Toolbar, ToolbarGroup, ToolbarTitle, Paper } from 'material-ui';
 import HeaderMenu from './HeaderMenu';
 
@@ -14,8 +14,7 @@ const isMobile = () => {
 class Header extends Component {
 	render() {
 		let toolbarStyle = {
-			height: "56px",
-			backgroundColor: blue400
+			backgroundColor: blue500
 		};
 
 		return (

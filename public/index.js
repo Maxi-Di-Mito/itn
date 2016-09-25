@@ -7,12 +7,30 @@ import store from  '../shared/redux/store/store'
 import routes from '../shared/Routes'
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Router, browserHistory } from 'react-router'
+import { blue500, blue700, tealA200, grey100, grey300, grey400, grey500, white, darkBlack, fullBlack } from 'material-ui/styles/colors';
+import {fade} from 'material-ui/utils/colorManipulator';
 
 injectTapEventPlugin();
 
 let styles = {
-    appBar: {
-        height: "50px"
+    fontFamily: 'Roboto, sans-serif',
+    primary1Color: blue500,
+    primary2Color: blue700,
+    primary3Color: grey400,
+    accent1Color: tealA200,
+    accent2Color: grey100,
+    accent3Color: grey500,
+    textColor: darkBlack,
+    alternateTextColor: white,
+    canvasColor: white,
+    borderColor: grey300,
+    disabledColor: fade(darkBlack, 0.3),
+    pickerHeaderColor: blue500,
+    clockCircleColor: fade(darkBlack, 0.07),
+    shadowColor: fullBlack,
+    toolBar: {
+        height: "56px",
+        backgroundColor: blue500
     }
 };
 
