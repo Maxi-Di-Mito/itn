@@ -12,7 +12,7 @@ class CatalogActions {
 			return fetch('/catalog', { method: 'GET' })
 				.then(response => response.json())
 				.then(data => this.onFetchSuccess(dispatch, data))
-				.catch(err => this.onFetchError(dispatch, error))
+				.catch(err => this.onFetchError(dispatch, err))
 		}
 	}
 

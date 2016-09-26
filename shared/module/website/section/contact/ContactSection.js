@@ -31,7 +31,7 @@ class ContactSection extends Component {
         let { handleSubmit } = this.props;
 
         return (
-            <ContactSectionView sendMail={sendMail}/>
+            <ContactSectionView sendMail={handleSubmit}/>
         )
     }
 }

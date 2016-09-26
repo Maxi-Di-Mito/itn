@@ -20,7 +20,7 @@ class CatalogSectionView extends Component {
 						catalog.map( (marca) => {
 							return marca.categorias.map((cat) => {
 								return cat.productos.map((prod, index) => (
-									<Col md={4}>
+									<Col md={4} key={index}>
 										<Card>
 											<CardHeader
 												title={prod.detalle} textStyle={textStyleHeader}

@@ -29,22 +29,22 @@ class GoogleMaps extends Component {
     }
 
     render() {
-        let { lat, lng, zoom } = this.props;
+        let {centerLat, centerLng, markerLat, markerLng, zoom } = this.props;
         let { width } = this.state;
 
         return (
             <Gmaps
                 width={width}
                 height="650px"
-                lat={lat}
-                lng={lng}
+                lat={centerLat}
+                lng={centerLng}
                 zoom={zoom}
                 params={{v: '3.exp'}}
                 onMapCreated={this.onMapCreated}
             >
                 <Marker
-                    lat={lat}
-                    lng={lng}
+                    lat={markerLat}
+                    lng={markerLng}
                     draggable={false}
                 />
             </Gmaps>
@@ -53,10 +53,10 @@ class GoogleMaps extends Component {
 }
 
 GoogleMaps.propTypes = {
-    lat: PropTypes.string.isRequired,
-    lng: PropTypes.string.isRequired,
-    width: PropTypes.string.isRequired,
-    height: PropTypes.string.isRequired,
+    centerLat: PropTypes.string.isRequired,
+    centerLng: PropTypes.string.isRequired,
+    markerLat: PropTypes.string.isRequired,
+    markerLng: PropTypes.string.isRequired,
     zoom: PropTypes.number.isRequired
 };
 
