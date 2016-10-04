@@ -2,6 +2,7 @@
   "name": "itn",
   "version": "0.0.1",
   "scripts": {
+    "electron": "electron ./server/electronView",
     "start-dev": "npm run postinstall && npm run start",
     "start": "node index.js",
     "compile": "babel ./server -d ./dist",
@@ -55,6 +56,7 @@
     "node": ">= 6.2.0"
   },
   "devDependencies": {
-    "babel-plugin-transform-decorators-legacy": "^1.3.4"
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "electron": "^1.4.2"
   }
 }
