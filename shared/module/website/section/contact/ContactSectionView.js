@@ -42,7 +42,7 @@ class ContactSectionView extends Component {
             <section id="contact">
                 <div className="container">
                     <div className="google-map">
-                            <GoogleMaps {...mapProps}/>
+                        <GoogleMaps {...mapProps}/>
                     </div>
                     <div className="overlap">
                         <Paper Depth={2} style={{ padding: "20px" , textAlign: "center"}}>

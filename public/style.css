@@ -12,6 +12,7 @@ html, body {
 .container {
     height: 650px;
     background: transparent;
+    width: auto;
 }
 
 .google-map {

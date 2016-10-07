@@ -18,6 +18,8 @@ class GoogleMaps extends Component {
             center: null,
             scrollwheel: false
         });
+        this.handleResize();
+
     };
 
     componentWillMount() {
@@ -36,10 +38,11 @@ class GoogleMaps extends Component {
             <Gmaps
                 width={width}
                 height="650px"
+                loadingMessage={'Cargando mapa...'}
                 lat={centerLat}
                 lng={centerLng}
                 zoom={zoom}
-                params={{v: '3.exp'}}
+                params={{v: '3.exp', key:'AIzaSyA2b6TbC0ZrVfLWl1wRcMuAGcdMuO7YUT4'}}
                 onMapCreated={this.onMapCreated}
             >
                 <Marker
